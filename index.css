@@ -14,9 +14,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 30%;
-
-    
+    height: 23%;
     z-index: -1;
   }
   body::before {
@@ -28,7 +26,6 @@ body {
     margin-top: 5%;
     margin-bottom: 5%;
     width: 905px;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
