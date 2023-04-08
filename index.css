@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    min-height: 100%;
+    background-color: hsl(230, 17%, 14%);
+    height: 80%;
+  }
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+
+    
+    z-index: -1;
+  }
+  body::before {
+    background-color: var(--bg-color);
+    --bg-color: hsl(232, 19%, 37%);
+  }
+  
+  header {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 905px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.topRow{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+    grid-auto-rows: minmax(70px, auto);
+    margin-bottom: 5%;
+}
+.facebook, .tweeter, .instagramm, .youtube{
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 200px;
+    height: 150px;
+    background-color: hsl(228, 28%, 20%);
+}
+.facebook:hover, .tweeter:hover, .instagramm:hover, .youtube:hover{
+    cursor: pointer;
+    background-color: rgb(53, 57, 75);
+}
+
+.social{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start
+}
+.light-switch{  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.dark{
+    margin-right: 5px;
+    color: white;
+    font-weight: 900;
+}
+.toggle-button {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+    margin: 0;
+    vertical-align: top;
+    background: linear-gradient(0.25turn,hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    border: 1px solid #bbc1e1;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+   }
+   .toggle-button::after {
+    content: "";
+    transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+    display: inline-block;
+    position: absolute;
+    left: 1px;
+    top: 0px;
+  
+    width: 20px;
+    height: 20px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+  
+    transform: translateX(0);
+  }
+  .toggle-button:checked::after {
+    transform: translateX(calc(100% + 1px));
+    background-color: #fff;  
+  }
+  .toggle-button:checked {
+    background: linear-gradient(0.25turn,hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  }
+  svg{
+    display: block;
+  }
+  .facebookSVG{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .centeringSVG{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+.eightDivs{
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+    grid-auto-rows: minmax(70px, auto);
+    margin-top: 2%;
+}
+
+h1{
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+}
+h2{
+    color: white;
+    font-size: 24px; 
+    margin-bottom: 3%;
+}
+h3{
+    color: white;
+    font-size: 20px; 
+}
+.lineF{
+    width: 200px;
+    height: 5px;
+    background-color: hsl(208, 92%, 53%);
+}
+.lineT{
+    width: 200px;
+    height: 5px;
+    background-color: hsl(203, 89%, 53%);
+}
+.lineI{
+    width: 200px;
+    height: 5px;
+    background: linear-gradient(0.25turn,hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+.lineY{
+    width: 200px;
+    height: 5px;
+    background-color: hsl(348, 91%, 46%);
+}
+
+.grey{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: hsl(228, 34%, 66%);
+}
+.total{
+    color: hsl(228, 34%, 66%);
+}
+.greyO{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: hsl(228, 34%, 66%,0.7);
+}
+.sobaka{
+    padding-left: 5px;
+}
+.green{
+    color: #1EB589;
+    font-weight: 800;
+    font-size: 14px;
+}
+.red{
+    color: #DC414C;
+    font-size: 14px;
+    font-weight: 800;
+}
+.facebookP,.facebookL,.instagrammL,.instagrammV,.retweets,.tweeterL,.youtubeL,.youtubeV{
+    width: 200px;
+    height: 100px;
+    background-color: hsl(228, 28%, 20%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.facebookP:hover,.facebookL:hover,  .instagrammL:hover,.instagrammV:hover,.retweets:hover, .tweeterL:hover, .youtubeL:hover,.youtubeV:hover{
+    cursor: pointer;
+    background-color: rgb(53, 57, 75);
+}
+
+
+.faceP,.bookP, .faceL , .bookL,.instaL, .grammL, .instaV, .grammV, 
+.ret, .weets, .tweeL, .terL, .youL, .tubeL, .youV, .tubeV{
+    width: 250px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+/* My info */
+.kudzuya{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: rgb(0, 162, 255);
+    font-size: 20px;
+}
+
+.kudzuya a {
+    color: rgb(0, 162, 255);
+    font-size: 20px;
+    transition: 0.5;
+}
+
+.kudzuya a:hover {
+    text-decoration: underline;
+}
+a:link {
+    text-decoration: none;
+}
+/* My info ends*/
+
+/* mobile settings */
+@media screen and (max-width: 1000px)
+{
+    main {
+        
+        height: 100%;
+        display: block;
+    }
+    header{
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        display: block;
+        gap: 0;
+        }
+    .light-switch{
+        padding-top: 27px;
+    }
+    input{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .content{
+        padding-top: 25px;
+        height: 100%;
+        width: 100%;
+    }
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+      }
+
+    .kudzuya{
+        position: relative;
+        top: 100px;
+        bottom: 0;
+        width: 100%;
+        color: rgb(0, 162, 255);
+    }
+    .kudzuya a {
+        color: rgb(0, 162, 255);
+        font-size: 20px;
+        transition: 0.5;
+    }
+    ::before{
+        width: 100%;
+        display: block;
+    }
+
+       .topRow {
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+        gap: 35px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: none;
+        margin-bottom: 5%;
+       }
+       .eightDivs {
+        padding-top: 10px;
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: none;
+        gap: 35px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2%;
+       }
+       .facebook, .tweeter, .instagramm, .youtube{
+        width: 100%;
+        min-height: 170px;
+        /* margin-left: auto;
+        margin-right: auto; */
+        /* display: block; */
+    }
+    .facebookP,.facebookL,.instagrammL,.instagrammV,.retweets,.tweeterL,.youtubeL,.youtubeV{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .faceP,.bookP, .faceL , .bookL,.instaL, .grammL, .instaV, .grammV, 
+.ret, .weets, .tweeL, .terL, .youL, .tubeL, .youV, .tubeV{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+    .lineF, .lineT, .lineI, .lineY{
+        width: 100%;
+        display: block;
+        min-height: 5px;
+    }
+    .right{
+        margin-right: 11px;
+    }
+    .left{
+        margin-left: 25px;
+    }
+    h3{
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto; 
+    }
+}
